@@ -1,16 +1,10 @@
 #!/usr/bin/env ksh
 
-# Install all package
-doas pkg_add -l $HOME/.dotfiles/pkglist
+# Install all packages
+doas pkg_add -l $HOME/.pkglist
 
-# Create dotfiles in $HOME with RCM
-env RCRC=$HOME/.dotfiles/rcrc rcup
-
-# Validate previous step
-rcup
-
-# Set fish as the default shell
-chsh -s /usr/local/bin/fish
+# Set bash as the default shell
+chsh -s /usr/local/bin/bash
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
