@@ -1,0 +1,32 @@
+exec kitty
+
+#Default is kitty
+unbind c
+bind c exec kitty
+
+#Aliases
+alias term exec kitty
+alias reload exec ratpoison -c "source $HOME/.ratpoisonrc"
+
+exec ratpoison -c "banish"
+set font "dina:size=10"
+set winname title
+set wingravity center
+set transgravity center
+set bargravity center
+
+set bgcolor #000000
+set fgcolor #ffffff
+
+bind k focusup
+bind j focusdown
+bind h focusleft
+bind l focusright
+
+bind Q delete
+bind q only
+
+bind s vsplit
+bind v hsplit
+bind r resize
+bind Escape delete

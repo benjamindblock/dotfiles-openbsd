@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+kitty @ launch --type=tab --tab-title "sbcl" --keep-focus --no-response --allow-remote-control
+kitty @ send-text --match-tab 'title:^sbcl' "sbcl --load ~/.vim/plugged/slimv/slime/start-swank.lisp\\x0d"
