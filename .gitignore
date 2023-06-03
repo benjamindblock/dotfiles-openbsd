@@ -6,6 +6,7 @@
 .cshrc
 .config/chromium
 .config/gh
+.config/kitty/kitty.conf.bak
 .config/neofetch
 .config/transmission-daemon
 .config/wireshark
