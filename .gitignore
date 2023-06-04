@@ -1,5 +1,6 @@
 .Xauthority
 .Xdefaults
+.aws/credentials
 .bash_history
 .battlestar.scores
 .cache/
@@ -35,5 +36,6 @@
 Documents/
 Downloads/
 Media/
+mbox
 Projects/
 quicklisp/
