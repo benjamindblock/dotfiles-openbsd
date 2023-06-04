@@ -21,16 +21,7 @@ Plug 'https://github.com/tpope/vim-dispatch.git'
 Plug 'https://github.com/dense-analysis/ale.git'
 " VOoM Outliner
 Plug 'https://github.com/vim-voom/VOoM.git'
-" Rainbow Parentheses
-Plug 'https://github.com/junegunn/rainbow_parentheses.vim.git'
-" Slimv
-Plug 'https://github.com/kovisoft/slimv.git'
 call plug#end()
-
-" Swank commands for Lisp development
-let g:slimv_swank_cmd = 'Dispatch! ~/lib/start_swank'
-let g:slimv_repl_split=4
-let g:paredit_leader="<Space>"
 
 " Open Netrw splits in the right hand side
 let g:netrw_altv=1
@@ -148,13 +139,12 @@ if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
 
-" fzy for fuzzy search
 function! FzyCommand(choice_command, fzy_args, vim_command)
   try
     let selection = system(a:choice_command . " | fzy " . a:fzy_args)
   catch /Vim:Interrupt/
-    " Swallow the ^C so that the redraw below happens; otherwise there will be
-    " leftovers from fzy on the screen
+    " Swallow the ^C so that the redraw below happens; otherwise
+    " there will be leftovers from fzy on the screen.
     redraw!
     return
   endtry
@@ -162,13 +152,7 @@ function! FzyCommand(choice_command, fzy_args, vim_command)
   exec a:vim_command . " " . selection
 endfunction
 
-" If in a git directory, leverage the speed and convenience of 'git ls-files'
-" If not, use regular 'find .'
-if filereadable('.gitignore')
-  nnoremap <leader>t :call FzyCommand("git ls-files", "", ":e")<cr>
-else
-  nnoremap <leader>t :call FzyCommand("find * -type f -o -type l", "", ":e")<cr>
-endif
+nnoremap <leader>t :call FzyCommand("fd -t f -H", "", ":e")<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SMART FILE DEFAULTS
@@ -207,9 +191,6 @@ augroup vimrcEx
 
   " Two-space indents in json
   autocmd! FileType json set sw=2 sts=2 expandtab
-
-  " Lisp rainbow parentheses
-  autocmd FileType lisp,clojure,scheme RainbowParentheses
 
   " Hitting K in a Ruby file opens rdoc, which completely breaks the terminal
   " to the point of having to kill vim and do `reset`. Unmap it entirely.
