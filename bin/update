@@ -1,0 +1,4 @@
+#!/usr/bin/env ksh
+
+# Update all packages
+doas pkg_add -l $HOME/.pkglist
