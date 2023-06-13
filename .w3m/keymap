@@ -1,0 +1,10 @@
+### Switch to the next / forwards buffer (NEXT)
+keymap L NEXT
+
+### Switch to the previous / backwards buffer (PREV)
+keymap H PREV
+
+### Go up a page with backspace, this makes going
+### up and down more intuitive (SPACE to advance
+### down the page, DEL to go back up).
+keymap DEL PREV_PAGE

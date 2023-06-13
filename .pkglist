@@ -5,8 +5,8 @@ colorls--
 curl--
 ddclient--
 dina-fonts--
-firefox--
 fd--
+firefox--
 fzy--
 git--
 github-cli--
@@ -23,9 +23,13 @@ prometheus--
 quirks--
 ratpoison--
 rcm--
+rlwrap--
 rsync--
 sbcl--
 shellcheck--
+sqlite3-tcl--
+tcl--
+tk--
 transmission--
 vim--gtk3-perl-python3-ruby
 weechat--

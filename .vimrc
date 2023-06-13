@@ -21,6 +21,14 @@ Plug 'https://github.com/tpope/vim-dispatch.git'
 Plug 'https://github.com/dense-analysis/ale.git'
 " VOoM Outliner
 Plug 'https://github.com/vim-voom/VOoM.git'
+" Vlime for Common Lisp
+Plug 'https://github.com/vlime/vlime.git'
+" Rainbow parentheses as a visual aid for S-expressions
+Plug 'https://github.com/junegunn/rainbow_parentheses.vim.git'
+" Parinfer for editing S-expressions
+Plug 'https://github.com/bhurlow/vim-parinfer.git'
+" Match-up for displaying matching beginning/end tags
+Plug 'https://github.com/andymass/vim-matchup.git'
 call plug#end()
 
 " Open Netrw splits in the right hand side
@@ -29,6 +37,9 @@ let g:netrw_altv=1
 " Theme
 set termguicolors
 colorscheme torte
+
+" Vlime config
+let g:vlime_leader=","
 
 " Highlight the current line
 set cursorline

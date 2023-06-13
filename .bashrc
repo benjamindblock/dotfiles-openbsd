@@ -14,14 +14,20 @@ HISTFILESIZE=2000000
 shopt -s cdspell direxpand dirspell globstar histappend \
   nocaseglob no_empty_cmd_completion
 
-# Unbreak broken, non-colored terminal
-export TERM="xterm-256color"
+# Helpful aliases
 alias ll="colorls -GAhltr"
 alias ls="colorls -G"
 alias vi="vim"
 alias vimrc="vim ~/.vimrc"
 alias todo="vi ~/Documents/todo.txt"
 alias follow="tail -f -n +1"
+alias tclsh="/usr/local/bin/tclsh8.6"
+alias make="gmake"
+
+# Unbreak broken, non-colored terminal.
+export TERM="xterm-256color"
+
+# Colorize some outputs.
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
@@ -82,6 +88,10 @@ function virev {
       return 1
     fi
     vim -p ${toOpen}
+}
+
+function removelink {
+  [ -L "$1" ] && mv "$(readlink "$1")" "$1"
 }
 
 # Colors have names too. Stolen from Arch wiki
