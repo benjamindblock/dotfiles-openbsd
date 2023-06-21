@@ -1,6 +1,9 @@
 # dotfiles-openbsd
 Dotfiles for OpenBSD systems. This repo should be directly cloned into the `$HOME` directory of the OpenBSD system. No using `mkrc`, worrying about symlinks, etc.
 
+## TODO:
+- Separate the OpenBSD personal from the OpenBSD server configuration? It would be nice to have a single, minimal setup for servers.
+
 ## Setup
 1. Generate new SSH keypair and add to Github
 2. `doas pkg_add git`
