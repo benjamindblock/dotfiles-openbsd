@@ -4,11 +4,12 @@
 .bash_history
 .battlestar.scores
 .cache/
-.config/chromium
-.config/gh
+.config/chromium/
+.config/gh/
 .config/kitty/kitty.conf.bak
-.config/transmission-daemon
-.config/wireshark
+.config/transmission-daemon/
+.config/weechat/
+.config/wireshark/
 .cshrc
 .cvsrc
 .dbus/
@@ -29,6 +30,8 @@
 .vim/plugged
 .vim/tmp
 .viminfo
+.w3m/*.gz
+.w3m/*cache*
 .w3m/cookie
 .w3m/history
 .xsession-errors
@@ -38,5 +41,6 @@ Documents/
 Downloads/
 Media/
 Projects/
+lib/
 mbox
 quicklisp/

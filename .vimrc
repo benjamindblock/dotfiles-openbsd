@@ -36,7 +36,7 @@ let g:netrw_altv=1
 
 " Theme
 set termguicolors
-colorscheme torte
+colorscheme zellner
 
 " Vlime config
 let g:vlime_leader=","
