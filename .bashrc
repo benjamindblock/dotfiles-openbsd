@@ -17,11 +17,13 @@ shopt -s cdspell direxpand dirspell globstar histappend \
 # Helpful aliases
 alias ll="colorls -GAhltr"
 alias ls="colorls -G"
+alias tls="tmux ls"
+alias ta="tmux a -t"
 alias vi="vim"
-alias vimrc="vim ~/.vimrc"
-alias todo="vi ~/Documents/todo.txt"
+alias vimrc="vim ${HOME}/.vimrc"
+alias bashrc="vim ${HOME}/.bashrc"
+alias todo="vi ${HOME}/Documents/todo.txt"
 alias follow="tail -f -n +1"
-alias tclsh="/usr/local/bin/tclsh8.6"
 alias make="gmake"
 
 # Unbreak broken, non-colored terminal.
@@ -33,14 +35,6 @@ export GREP_OPTIONS="--color"
 
 # Obviously.
 export EDITOR=/usr/local/bin/vim
-
-# Personal binaries
-export PATH=${PATH}:/usr/local/bin
-export PATH="~/bin:${PATH}"
-export PATH=${PATH}:~/etc/scripts
-
-# For builtins (eg., the recutils)
-export BASH_LOADABLES_PATH=${BASH_LOADABLES_PATH}:~/local/bash
 
 # Change up a variable number of directories
 # E.g:
@@ -155,5 +149,5 @@ git_colon() {
 export PS1="${txtred}[\u@\h]${txtrst}:${txtgrn}[\A]${txtrst}:${txtblu}[\w]${txtrst}\$(git_colon)${txtylw}\$(git_prompt) ${txtrst}| "
 export PS4='+${BASH_SOURCE[0]##*/}($LINENO)/${FUNCNAME[0]}> '
 
-source ~/bin/git-completion.sh
-source ~/bin/z.sh
+source $HOME/bin/git-completion.sh
+source $HOME/bin/z.sh

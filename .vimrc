@@ -36,7 +36,7 @@ let g:netrw_altv=1
 
 " Theme
 set termguicolors
-colorscheme zellner
+colorscheme paper
 
 " Vlime config
 let g:vlime_leader=","
@@ -62,13 +62,14 @@ let g:ale_linters = {
 \   'ruby': ['rubocop', 'reek'],
 \   'eruby': ['erblint'],
 \   'javascript': ['eslint'],
-\   'elixir': ['elixir-ls']
+\   'tcl': ['nagelfar']
 \}
 let g:ale_sign_error = '!!'
 let g:ale_sign_warning = '??'
 let g:ale_sign_info = 'oo'
 let g:ale_linters_explicit = 1
 let g:ale_list_window_size = 5
+let g:ale_virtualtext_cursor = 'disabled'
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 

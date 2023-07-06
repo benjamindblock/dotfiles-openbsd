@@ -41,6 +41,7 @@ Documents/
 Downloads/
 Media/
 Projects/
+build/
 lib/
 mbox
 quicklisp/

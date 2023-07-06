@@ -5,10 +5,6 @@
 PS1='$USER:$PWD# '
 export PS1
 
-LSCOLORS=fxexcxdxbxegedabagacad
-export LSCOLORS
-
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
-export PATH HOME TERM
 
-alias ls='colorls -G'
+export PATH HOME TERM
