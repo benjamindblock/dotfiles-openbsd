@@ -25,6 +25,7 @@ alias bashrc="vim ${HOME}/.bashrc"
 alias todo="vi ${HOME}/Documents/todo.txt"
 alias follow="tail -f -n +1"
 alias make="gmake"
+alias tclsh="rlwrap --no-warnings -c tclsh8.6"
 
 # Unbreak broken, non-colored terminal.
 export TERM="xterm-256color"
@@ -146,7 +147,7 @@ git_colon() {
     fi
 }
 
-export PS1="${txtred}[\u@\h]${txtrst}:${txtgrn}[\A]${txtrst}:${txtblu}[\w]${txtrst}\$(git_colon)${txtylw}\$(git_prompt) ${txtrst}| "
+export PS1="${txtcyn}[\u@\h]${txtrst}:${txtgrn}[\A]${txtrst}:${txtblu}[\w]${txtrst}\$(git_colon)${txtylw}\$(git_prompt) ${txtrst}| "
 export PS4='+${BASH_SOURCE[0]##*/}($LINENO)/${FUNCNAME[0]}> '
 
 source $HOME/bin/git-completion.sh

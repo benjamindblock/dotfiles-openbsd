@@ -36,7 +36,7 @@ let g:netrw_altv=1
 
 " Theme
 set termguicolors
-colorscheme paper
+colorscheme peachpuff
 
 " Vlime config
 let g:vlime_leader=","

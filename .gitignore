@@ -25,6 +25,7 @@
 .slime/
 .sndio/
 .ssh/
+.tclsh8.6_history
 .terminfo/
 .vim/.netrwhist
 .vim/plugged

@@ -14,6 +14,7 @@ github-cli--
 gmake--
 go--
 grafana--
+htop--
 kitty--
 minidlna--
 mosh--
@@ -34,6 +35,7 @@ tcl--
 tk--
 transmission--
 unzip--
+varnish--
 vim--gtk3-perl-python3-ruby
 weechat--
 wireguard-tools--
