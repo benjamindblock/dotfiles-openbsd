@@ -52,7 +52,7 @@ $ vi .vimrc
 ```
 
 ## `httpd`, `varnishd`, `relayd`
-
+```
       ╔══════════════════════════════════╗
       ║                                  ║
  ────▶║   http://accessoryrecords.com    ║──┐   ┌───────────────────────────────┐
@@ -84,6 +84,7 @@ $ vi .vimrc
      │  2. If not, forward to :8082     │       │                               │
      │                                  │       │                               │
      └──────────────────────────────────┘       └───────────────────────────────┘
+```
 
 ## Webserver Logging
 `httpd` server logs are located at `/var/www/logs/access.log` and `/var/www/logs/error.log`
