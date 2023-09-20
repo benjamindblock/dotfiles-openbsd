@@ -5,6 +5,7 @@
 .battlestar.scores
 .cache/
 .config/chromium/
+.config/fossil.db
 .config/gh/
 .config/kitty/kitty.conf.bak
 .config/transmission-daemon/
@@ -24,6 +25,7 @@
 .setup
 .slime/
 .sndio/
+.sqlite_history
 .ssh/
 .tclsh8.6_history
 .terminfo/
@@ -40,6 +42,7 @@
 .zcompdump
 Documents/
 Downloads/
+Fossil/
 Media/
 Projects/
 build/

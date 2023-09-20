@@ -147,7 +147,7 @@ git_colon() {
     fi
 }
 
-export PS1="${txtcyn}[\u@\h]${txtrst}:${txtgrn}[\A]${txtrst}:${txtblu}[\w]${txtrst}\$(git_colon)${txtylw}\$(git_prompt) ${txtrst}| "
+export PS1="${txtgrn}[\u@\h]${txtrst}:${txtblu}[\A]${txtrst}:${txtgrn}[\w]${txtrst}\$(git_colon)${txtylw}\$(git_prompt) ${txtrst}| "
 export PS4='+${BASH_SOURCE[0]##*/}($LINENO)/${FUNCNAME[0]}> '
 
 source $HOME/bin/git-completion.sh

@@ -137,3 +137,47 @@ Steps to setup a Wireguard connection to my Mullvad VPN:
 7. Verify IP address is now masked: `curl https://ip.ianix.com`
 
 Ref: Followed the "client" setup instructions from this article: [https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/](https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/)
+
+## Setting up Munin monitoring
+1. `doas pkg_add munin-node munin-server`
+2. Add above packages to .pkglist
+# NOTE: Using tail -n +2 to remove the first plugin (amavis)
+3. `doas munin-node-configure --shell | tail -n +2 | doas sh`
+4. `doas vim /etc/munin/munin.conf`
+```
+html_strategy cron
+graph_strategy cron
+```
+5. `doas vim /etc/munin/munin-node.conf`
+```
+host_name localhost
+# host *
+host 127.0.0.1
+```
+# NOTE: Order matters here. Node must be started before asyncd.
+6. `doas rcctl enable munin_node`
+7. `doas rcctl enable munin_asyncd`
+8. `doas rcctl start munin_node`
+9. `doas rcctl start munin_asyncd`
+10. `doas crontab -e`
+```
+# Munin stats gathering
+* * * * * su -s /bin/sh _munin /usr/local/bin/munin-cron
+```
+11. Setup httpd.conf to expose Munin
+```
+server "munin.benjamindblock.com" {
+  listen on * port 80
+  authenticate with "/htpasswd"
+  root "/htdocs/munin"
+}
+```
+12. Create a new user/password for /htpasswd
+```
+$ doas htpasswd /var/www/htpasswd b3lm0nt
+```
+13. Update permissions for htpasswd
+```
+doas chown www:daemon htpasswd
+```
+14. `doas rcctl restart httpd`

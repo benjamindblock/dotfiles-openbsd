@@ -18,6 +18,8 @@ htop--
 kitty--
 minidlna--
 mosh--
+munin-node--
+munin-server--
 neofetch--
 node_exporter--
 p5-ack--
@@ -30,8 +32,10 @@ rlwrap--
 rsync--
 sbcl--
 shellcheck--
+speedtest-cli--
 sqlite3-tcl--
 tcl--
+tcllib--
 tk--
 transmission--
 unzip--
